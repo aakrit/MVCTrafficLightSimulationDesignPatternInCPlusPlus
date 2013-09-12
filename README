@@ -1,0 +1,15 @@
+This HW4 was written in C++ and compiled and ran sucessfully using xcode
+
+This HW used the MVC pattern to create a traffic and ped light signal implementation.
+
+When the main funciton runs we first initialize the MVP pattern. The TrafficLightModel, PedLightModel classes are created first, then the TrafficLightView and PedLightView classes are creating passing in the reference to both the model objects respectively. When both the view objects get created they attach them selfviews to their respective models and then they create a controller by passing into it the pointer to the model and the view itself. The controller constructor then runs (overloaded) for both of the model/views and attaches itself to the respective model.
+
+Once the pattern is initialized, we can ask the user for input and call the eventhandle method of the controller to handle the event. The controller then calls the service method of the model. The service method updates the model data to the new data and then calls the notify method to notify all its controllers and views to update. The view then runs its update method and call the getData method of the model to get the new data and prints it to stdout for the user. The Controller also runs in the update method but in our case it doesn't do anything alhought ideally it would update some information within its scope. Then user is then asked for input again
+
+The controller and view both inherit from Observer where the observer just has a pure virtual function called update serving not only as a base class but also as an abstract base class forcing its models and controller to implement the important update function. i didn't need to make the call abstract but feel it makes more sense for this purpose here.
+
+More detail is explained in the code via comments.
+
+Please email me with any questions regarding this submission at: aakrit@uchicago.edu
+
+Thank you.
