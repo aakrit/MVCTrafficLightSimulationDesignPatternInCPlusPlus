@@ -1,6 +1,6 @@
-This HW4 was written in C++ and compiled and ran sucessfully using xcode
+This was written in C++ and compiled and ran sucessfully using xcode
 
-This HW used the MVC pattern to create a traffic and ped light signal implementation.
+Here I MVC pattern to create a traffic and ped light signal implementation.
 
 When the main funciton runs we first initialize the MVP pattern. The TrafficLightModel, PedLightModel classes are created first, then the TrafficLightView and PedLightView classes are creating passing in the reference to both the model objects respectively. When both the view objects get created they attach them selfviews to their respective models and then they create a controller by passing into it the pointer to the model and the view itself. The controller constructor then runs (overloaded) for both of the model/views and attaches itself to the respective model.
 
